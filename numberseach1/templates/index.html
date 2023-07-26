@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>みんなの安心電話番号検索</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<header><h1 class="main-title">みんなの安心電話番号検索</h1></header>
+
+<body>
+    <div class="search-bar">
+        <h2>電話番号を検索して投稿を見つけよう！</h2>
+        <form action="{{ url_for('search') }}" method="POST">
+            <input type="text" name="search_query" placeholder="電話番号を入力して検索">
+            <button type="submit">検索</button>
+        </form>
+    </div>
+
+    <h2 class="itiran">みんなの口コミ</h2>
+    <div class="post-block">
+        {% for phone_number, info_list in grouped_posts.items() %}
+        <div class="post">
+            <a href="{{ url_for('view_post', post_id=phone_number) }}">{{ phone_number }}</a><br>
+            <strong>直近の投稿：</strong><br>
+            {% for info in info_list %}
+            {{ info }}<br>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>    
+
+    <div class="create-post-button">
+        <h2>投稿する</h2>
+        <a href="{{ url_for('create_post') }}" class="button-link">ここをクリックして投稿</a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li class="flash-message">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>

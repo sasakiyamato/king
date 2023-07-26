@@ -1,0 +1,136 @@
+body {
+    font-family: "UDデジタル教科書体", sans-serif;
+    font-size: 16px; /* 文字の大きさを調整 */
+    background-color: #F0F8FF; /* 水色の背景色 */
+    text-align: center; /* 要素を中央寄せに */
+    margin: 0; /* body要素の余白を削除 */
+    padding: 0; /* body要素の余白を削除 */
+}
+
+header {
+    background-color: #b2b9f5;
+    padding: 10px 0; /* 上下の余白を追加 */
+    margin: 0; /* 上下の余白を削除 */
+}
+
+h1.main-title {
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0; /* 上下の余白を削除 */
+}
+
+/* 検索バーのスタイル */
+.search-bar {
+    margin-top: 50px; /* 上側の余白を追加 */
+    margin-bottom: 30px; /* 下側の余白を追加 */
+}
+
+.search-bar h2 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.itiran {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.search-bar form {
+    display: inline-block;
+}
+
+.search-bar input {
+    padding: 10px; /* 検索フォームを大きく */
+    font-size: 16px; /* フォントサイズを調整 */
+}
+
+.search-bar button {
+    padding: 10px 20px; /* 検索ボタンを大きく */
+    background-color: #00BFFF; /* 薄めの水色 */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* 角を若干丸める */
+    transition: all 0.3s; /* 0.3秒で変化するトランジションを設定 */
+}
+
+/* マウスが乗った時のスタイル */
+.search-bar button:hover,
+.create-post-button a.button-link:hover {
+    transform: translateY(2px); /* ボタンが2pxだけへこんで見える効果 */
+}
+
+/* 投稿一覧のスタイル */
+.post-list {
+    text-align: left;
+    margin-left: 0; /* 左側の余白を削除 */
+    margin-top: 50px; /* 上側の余白を追加 */
+}
+
+.post {
+    margin-bottom: 10px;
+}
+
+/* 新しい投稿を作成のスタイル */
+.create-post-button {
+    margin-top: 30px; /* 上側の余白を追加 */
+    text-align: center;
+}
+
+.create-post-button h2 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.create-post-button a.button-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px; /* ボタンを大きく */
+    background-color: #00BFFF; /* 薄めの水色 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* 角を若干丸める */
+    transition: all 0.3s; /* 0.3秒で変化するトランジションを設定 */
+    line-height: 1.5;
+    display: inline-block; /* インライン要素に変更 */
+}
+
+.create-post-button a.button-link:hover {
+    transform: translateY(2px); /* ボタンが2pxだけへこんで見える効果 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ボタンが少し凹むように影を追加 */
+}
+
+
+/* スタイル.css */
+/* ... 他のスタイル ... */
+.info-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* マウスが乗った時のスタイル */
+.create-post-button a.button-link:hover {
+    transform: translateY(2px); /* ボタンが2pxだけへこんで見える効果 */
+}
+.post-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* フラッシュメッセージのスタイル */
+.flash-message {
+    color: #00BFFF; /* 薄めの水色 */
+    list-style: none;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>検索</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>検索</h1>
+    <form action="{{ url_for('search') }}" method="POST">
+        <input type="text" name="search_query" placeholder="電話番号を入力して検索">
+        <button type="submit">検索</button>
+    </form>
+
+    <h2>検索結果</h2>
+    {% if posts %}
+    <ul>
+        {% for post in posts %}
+        <li><a href="{{ url_for('view_post', post_id=post.id) }}">{{ post.phone_number }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>該当する投稿はありません。</p>
+    {% endif %}
+</body>
+</html>
